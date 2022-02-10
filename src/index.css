@@ -1,13 +1,196 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Staatliches&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 16px;
+  text-align: center;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background-color: #f1ecec;
+}
+h1{
+  font-family: 'Staatliches', cursive;
+}
+#root{
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+main{
+  flex-grow: 1;
+  margin: 1rem 0;
+}
+h1{
+  font-size: 2.5rem;
+}
+
+/* Header footer part */
+.Header .container{
+  max-width: 1000px;
+}
+.Header, .Footer{
+  background-color: rgb(58, 40, 107);
+  color: #fff;
+}
+.Header, .Footer, main {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*HEader*/
+.Header .container{
+  display: flex;
+  justify-content: space-between;
+}
+.Header .container nav{
+  display: grid;
+  place-content: center;
+}
+.Header .container h1 {
+  text-transform: uppercase;
+}
+.Header .container nav ul{
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.Header .container nav ul li .navOpt{
+  text-decoration: none;
+  color: #fff;
+}
+/*Footer*/
+.Footer p a {
+  margin-left: 0.3rem;
+  color: #33c426;
+}
+/*----------------------H&F---------------*/
+
+
+/* Form Page UPDATE/EDIT Page */
+.addItemForm {
+  width: 80%;
+  max-width: 500px;
+  padding: 1rem;
+  text-align: left;
+}
+.addItemForm h2 {
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.addItemForm input {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0.2rem 0 1rem 0;
+  width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border: 2px solid rgb(18, 13, 37);
+  outline: none;
+}
+.addItemForm button{
+  width: 100%;
+  padding: 0.25rem;
+  min-height: 40px;
+  background-color: #228819;
+  color: #fff;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0.2rem;
+}
+.addItemForm button:hover{
+  background-color: #33c426;
+  transform: scaleY(1.1);
+}
+
+main.UpdatePage .container {
+  display: flex;
+  justify-content: center;
+}
+/*-------------------------*/
+
+
+/* Missing Page */
+.Missing .container h2{
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.Missing .container .link{
+  display: block;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #006b0e;
+  text-decoration: none;
+}
+.Missing .container .link:hover{
+  color: #22c513;
+}
+/*-----------------------------*/
+
+
+/* Menu Item Page */
+.MenuItemPage .container{
+  display: flex;
+  justify-content: center;
+}
+.MenuItemPage .container .MenuItem {
+  max-width: 500px;
+  text-align: left;
+}
+.MenuItemPage .container .MenuItem table th,
+.MenuItemPage .container .MenuItem table td {
+  padding: 0.2rem 0;
+  padding-right: 1rem;
+  text-transform: capitalize;
+}
+.MenuItemPage .container .MenuItem table th{
+  font-size: 1.2rem;
+  text-align: center;
+}
+.MenuItemPage .container .MenuItem table td.title {
+  font-weight: 500;
+}
+
+.MenuItemPage .container .MenuItem .buttons{
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.2rem;
+}
+.MenuItemPage .container .MenuItem button{
+  background-color: rgb(36, 101, 158);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  border: none;
+  border-radius: 0.3rem;
 }
