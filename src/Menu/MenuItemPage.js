@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import DataContext from "../context/DataContext";
 import MissingPage from "../missing/MissingPage";
 import bg from "../images/coolbgB.svg";
+import { IoIosArrowBack } from "react-icons/io";
 
 
 const MenuItemPage = () => {
@@ -21,7 +22,13 @@ const MenuItemPage = () => {
     <>
       {item?
         <main>
-          <div className="container" style={{background: `url(${bg})`}}>
+          <div className="container menuItemPage" style={{background: `url(${bg})`}}>
+            <Link to='/menu' className="linkToMenu">
+              <div className="icon">
+                <IoIosArrowBack id="arrow"/>
+                <span>Go To Menu</span>
+              </div>
+            </Link>
             <article className="MenuItem">
               <table>
                 <tbody>

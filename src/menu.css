@@ -114,3 +114,84 @@
     font-weight: 700;
     background-color: rgb(194, 255, 235);
 }
+/*Menu Item Page*/
+.container.menuItemPage{
+    padding: 2rem 4rem;
+}
+.container.menuItemPage .linkToMenu{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.container.menuItemPage .icon{
+    position: relative;
+    width: 200px;
+    min-height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgba(240, 248, 255, 0.7);
+}
+.container.menuItemPage .icon:hover{
+    background-color: aliceblue;
+    box-shadow: 0 0 20px 10px rgba(94, 94, 94, 0.5);
+    animation: menuGoto 2s infinite;
+}
+/*Go to menu animation*/
+@keyframes menuGoto {
+    0% {left: 0px; top: 0px;}
+    50% {left: -20px; top: 0px;}
+    100% {left: 0px; top: 0px;}
+}
+/*------------------------*/
+.container.menuItemPage .icon #arrow{
+    font-size: 2rem;
+}
+/*----------------*/
+
+/*Menu Item page the table*/
+.container.menuItemPage article.MenuItem{
+    margin: 0 auto;
+    max-width: 400px;
+    display: grid;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+.container.menuItemPage article.MenuItem table{
+    padding: 1rem;
+    background-color: aliceblue;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+.container.menuItemPage article.MenuItem table th{
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.container.menuItemPage article.MenuItem table td.title{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+/*Table Done*/
+
+/*On to the buttons*/
+.container.menuItemPage article.MenuItem div.buttons{
+    display: grid;
+    gap: 0.5rem;
+}
+.container.menuItemPage article.MenuItem .buttons button{
+    min-height: 30px;
+    pad: 0.5rem 1rem;
+    background-color: rgb(74, 105, 95);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+}
+.container.menuItemPage article.MenuItem .buttons button:hover{
+    color: rgb(91, 244, 255);
+}
