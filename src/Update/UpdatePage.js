@@ -28,7 +28,7 @@ const UpdatePage = () => {
           price
         };
         setMenuList([newItem,...menuList]);
-        navigate('/');
+        navigate('/menu');
       }
     } catch(err){
       alert(err.message);

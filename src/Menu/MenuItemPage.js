@@ -15,7 +15,7 @@ const MenuItemPage = () => {
   const handleDelete = (id) => {
     const newLL = menuList.filter(item => item.id !== id);
     setMenuList(newLL);
-    navigate('/');
+    navigate('/menu');
   }
 
   return(
