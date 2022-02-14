@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import DataContext from '../context/DataContext';
-import MissingPage from '../missing/MissingPage';
 import MenuItem from './MenuItem';
 
 const Menu = () => {
@@ -8,7 +7,7 @@ const Menu = () => {
   return (
     <>
       { searchResult.length ?
-        <div>
+        <div className="menuItemList">
           {
             searchResult.map((item, index) => (
               <MenuItem
@@ -21,7 +20,7 @@ const Menu = () => {
           }
         </div>
       : 
-        <MissingPage message={"No Menu to Display"} />
+        <p>No Items to Display</p>
       }
     </>
   );

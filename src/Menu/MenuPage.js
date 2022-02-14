@@ -1,11 +1,11 @@
 import SearchOption from "./SearchOption";
 import Menu from "./Menu";
-
+import bg from "../images/coolbgB.svg";
 
 const MenuPage = () => {
   return (
-    <main className="MenuPage">
-      <div className='container'>
+    <main>
+      <div className='container menu' style={{background: `url(${bg})`}}>
         <SearchOption />
         <Menu />
       </div>

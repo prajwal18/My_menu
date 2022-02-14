@@ -1,0 +1,72 @@
+:root{
+    --menu-title-color: rgb(35, 38, 58);
+    --cat-opt-selected: rgb(0, 0, 0);
+}
+
+.menu.container{
+    padding: 2rem 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 3rem;
+}
+
+/*Search Options*/
+.SearchOptions{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+.SearchOptions .menuTitle{
+    display: inline-block;
+    text-align: center;
+    justify-self: center;
+}
+.SearchOptions .menuTitle h2{
+    font-size: 2rem;
+    color: var(--menu-title-color);
+}
+.SearchOptions .menuTitle .underline{
+    margin-top: 0.3rem;
+    width: 80%; height: 5px;
+    margin: 0 auto;
+    background-color: gold;
+}
+/*Working on Category options*/
+.SearchOptions .CategorySearch{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.SearchOptions .CategorySearch button{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    background: none;border: none;
+}
+.SearchOptions .CategorySearch button:hover{
+    transform: scale(1.2);
+}
+.SearchOptions .CategorySearch button.selected{
+    font-weight: 700;
+}
+/*Working on sub category search*/
+.SearchOptions .SubCategory{
+    min-height: 25px;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(119, 119, 119);
+    border-radius: 5px;
+    max-width: 300px;
+    justify-self: center;
+    text-transform: capitalize;
+}
+/*---Search Options Done---*/
+
+
+/*Menu List Display*/
+.menuItemList{
+    padding: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}

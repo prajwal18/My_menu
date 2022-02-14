@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Staatliches&display=swap');
+:root{
+  --header-bgcolor: rgb(0, 0, 0);
+  --header-color: rgb(255, 255, 255);
+  --link-hover: rgb(0, 255, 242);
+  --footer-bgcolor: rgb(0, 0, 0);
+  --footer-color: rgb(255, 255, 255);
+  --button-bgcolor: rgb(43, 43, 43);
+}
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 16px;
-  text-align: center;
+  text-align: left;
 }
-
 body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-  background-color: #f1ecec;
-}
-h1{
-  font-family: 'Staatliches', cursive;
 }
 #root{
   width: 100%;
@@ -28,7 +30,6 @@ h1{
   align-items: center;
   justify-content: center;
 }
-
 .App {
   min-height: 100vh;
   width: 100%;
@@ -37,160 +38,207 @@ h1{
   justify-content: flex-start;
   align-items: center;
 }
-.container {
-  width: 100%;
-  max-width: 1200px;
+h1{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
 }
 main{
   flex-grow: 1;
-  margin: 1rem 0;
 }
-h1{
-  font-size: 2.5rem;
-}
-
-/* Header footer part */
-.Header .container{
-  max-width: 1000px;
-}
-.Header, .Footer{
-  background-color: rgb(58, 40, 107);
-  color: #fff;
-}
-.Header, .Footer, main {
-  padding: 1rem;
+header, footer, main{
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+main.coolbg{overflow: hidden;}
+.headerContainer,.container,
+.footerContainer {
+  width: 90%;
+  max-width: 1200px;
+}
+button{
+  cursor: pointer;
+}
+button:hover{
+  transform: scale(1.05);
 }
 
-/*HEader*/
-.Header .container{
-  display: flex;
-  justify-content: space-between;
-}
-.Header .container nav{
+/*Working on Header*/
+.headerContainer{
   display: grid;
-  place-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
 }
-.Header .container h1 {
-  text-transform: uppercase;
+.headerContainer div{
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
-.Header .container nav ul{
+.headerContainer .logo {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+/*NavPartStarts*/
+.headerContainer nav ul{
+  padding:1rem;
+  background-color: var(--header-bgcolor);
   list-style: none;
   display: flex;
+  gap: 2rem;
+  font-size: 1.1rem;
+}
+.headerContainer nav ul .navOpt{
+  color: var(--header-color);
+  text-decoration: none;
+}
+.headerContainer nav ul .navOpt:hover{
+  color: var(--link-hover);
+}
+/*Header Done*/
+
+
+/*Working on Footer*/
+footer{
+  background-color: var(--footer-bgcolor);
+  color: var(--footer-color);
+  padding: 2rem 0;
+}
+.footerContainer{
+  display: grid;
+  align-items: center;
   gap: 1rem;
 }
-.Header .container nav ul li .navOpt{
-  text-decoration: none;
-  color: #fff;
+.footerContainer div {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: auto 1fr;
 }
-/*Footer*/
-.Footer p a {
-  margin-left: 0.3rem;
-  color: #33c426;
+.footerContainer li{
+  color: rgb(177, 177, 177);
+  margin-top: 0.5rem;
+  list-style: none;
 }
-/*----------------------H&F---------------*/
-
-
-/* Form Page UPDATE/EDIT Page */
-.addItemForm {
-  width: 80%;
-  max-width: 500px;
-  padding: 1rem;
-  text-align: left;
-}
-.addItemForm h2 {
-  padding-bottom: 2rem;
-  text-transform: uppercase;
-  text-align: center;
-}
-.addItemForm input {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0.2rem 0 1rem 0;
-  width: 100%;
-  min-height: 48px;
-  font-size: 1rem;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  border: 2px solid rgb(18, 13, 37);
-  outline: none;
-}
-.addItemForm button{
-  width: 100%;
-  padding: 0.25rem;
-  min-height: 40px;
-  background-color: #228819;
-  color: #fff;
-  font-size: 0.9rem;
-  border: none;
-  border-radius: 0.2rem;
-}
-.addItemForm button:hover{
-  background-color: #33c426;
-  transform: scaleY(1.1);
-}
-
-main.UpdatePage .container {
+.footerContainer ul.outerList{
   display: flex;
-  justify-content: center;
+  gap: 2rem;
 }
-/*-------------------------*/
+.footerContainer p.bottomWriting{ text-align: right;}
+.footerContainer p >p{margin-top: 10px;}
+.footerContainer #icon{margin-left: 10px; color: var(--link-hover);}
+.footerContainer #icon:hover{transform: scale(2);}
+footer .f_logo{width: 100px; height: 100px;}
+footer .f_logo #back-text{fill: white;}
+footer .f_logo #text{fill: rgb(0, 0, 0);}
+/*Footer Done*/
 
 
-/* Missing Page */
-.Missing .container h2{
-  margin: 1rem 0;
-  font-size: 2rem;
-  font-weight: 800;
+/*Update (Form Page)*/
+.container.coolbg{
+  margin: 1rem;
 }
-.Missing .container .link{
-  display: block;
-  margin: 1rem 0;
-  font-size: 1.2rem;
-  color: #006b0e;
-  text-decoration: none;
-}
-.Missing .container .link:hover{
-  color: #22c513;
-}
-/*-----------------------------*/
-
-
-/* Menu Item Page */
-.MenuItemPage .container{
-  display: flex;
-  justify-content: center;
-}
-.MenuItemPage .container .MenuItem {
+.formContainer{
   max-width: 500px;
-  text-align: left;
+  padding: 2rem;
+  background-color: var(--footer-color);
+  margin: 2rem auto;
+  display: grid;
+  gap: 2rem;
 }
-.MenuItemPage .container .MenuItem table th,
-.MenuItemPage .container .MenuItem table td {
-  padding: 0.2rem 0;
-  padding-right: 1rem;
+.addItemForm input,
+.addItemForm label{
+  width: 100%;
+  text-align: left;
   text-transform: capitalize;
 }
-.MenuItemPage .container .MenuItem table th{
-  font-size: 1.2rem;
-  text-align: center;
+.formContainer .addItemForm input{
+  padding: 0.5rem;
+  min-height: 48px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 1.1rem;
 }
-.MenuItemPage .container .MenuItem table td.title {
-  font-weight: 500;
-}
-
-.MenuItemPage .container .MenuItem .buttons{
-  margin-top: 1rem;
-  display: grid;
-  gap: 0.2rem;
-}
-.MenuItemPage .container .MenuItem button{
-  background-color: rgb(36, 101, 158);
-  color: #fff;
-  font-weight: 500;
-  font-size: 0.8rem;
-  padding: 0.2rem;
+.formContainer .addItemForm label{display: inline-block; margin-bottom: 0.2rem;}
+.formContainer .addItemForm button{
+  width: 100%;
+  min-height: 48px;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  background-color:rgb(88, 88, 88);
+  color: white;
   border: none;
-  border-radius: 0.3rem;
+  border-radius: 5px;
+}
+.formContainer .addItemForm button:hover{
+  color: var(--link-hover);
+  font-weight: 700;
+  background-color: var(--button-bgcolor);
+}
+/*Update Form Part Done*/
+
+
+/*Home Part*/
+.homeStuff{
+  display: grid;
+  padding: 2rem;
+  gap: 1rem;
+  grid-template-columns: 5fr 3fr;
+}
+.homeStuff .textStuff,.homeStuff .imageStuff{
+  width: 100%;height: 100%;position: relative;
+  padding: 2rem;
+}
+.homeStuff .textStuff::before{
+  content: '';display: block;
+  z-index: -1;position: absolute;
+  background-color: gold; height: 100%;
+  width: 100vw; top: 0; right: 0;
+}
+.homeStuff .imageStuff::before{
+  content: '';display: block;
+  z-index: -1;position: absolute;
+  background-color: rgb(0, 224, 224);height: 100%;
+  width: 100vw;top: 0;left: 0;
+}
+/*-----Home Layout done----*/
+
+/*Home Contents*/
+.homeStuff h2{
+  font-size: 3.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.homeStuff h2 span{
+  font-size: 4rem;font-weight: 700;
+  letter-spacing: -4px;
+}
+.homeStuff p{
+  margin: 2rem 0; text-align: justify;
+}
+.homeStuff button{
+  width: 200px;
+  min-height: 48px;
+  padding: 0.5rem;
+  font-size: 1.1rem; font-weight: 700;
+  background-color: black; color: white;
+  border: none; border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+}
+/*----------------------------*/
+
+/*Image Stuff*/
+.homeStuff .imageStuff{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+.homeStuff .imageStuff img{
+  width: 100%;
+  cursor: pointer;
+}
+.homeStuff .imageStuff img:hover{
+  transform: scale(1.2);
 }

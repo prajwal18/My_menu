@@ -1,6 +1,8 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import DataContext from "../context/DataContext";
+import bg from '../images/coolbgA.svg';
+
 
 const UpdatePage = () => {
   const[title, setTitle] = useState('');
@@ -38,49 +40,52 @@ const UpdatePage = () => {
   }
 
   return (
-      <main className="UpdatePage">
-        <div className='container'>
-          <form className="addItemForm" onSubmit={handleFormSubmit}>
+      <main>
+        <div className="container" style={{background: `url(${bg})`}}>
+          <div className="formContainer">
             <h2>Add New Menu Item</h2>
-            <label htmlFor="title">Title:</label>
-            <input
-              id="title"
-              type="text"
-              required
-              placeholder="Aalo Tarkai"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-            <label htmlFor="category">Category:</label>
-            <input
-              id="category"
-              type="text"
-              required
-              placeholder="breakfast,lunch..."
-              value={itemCat}
-              onChange={(e) => setItemCat(e.target.value)}
-            />
-            <label htmlFor="subCategory">Sub-Category:</label>
-            <input
-              id="subCategory"
-              type="text"
-              required
-              placeholder="momo,chowmein..."
-              value={itemSubCat}
-              onChange={(e) => setItemSubCat(e.target.value)}
-            />
-            <label htmlFor="price">Price:</label>
-            <input
-              id="price"
-              type="number"
-              required
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-            />
-            <button type="submit">
-              Submit
-            </button>
-          </form>
+            <form className="addItemForm" onSubmit={handleFormSubmit}>
+              
+              <label htmlFor="title">Title:</label>
+              <input
+                id="title"
+                type="text"
+                required
+                placeholder="Aalo Tarkai"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+              />
+              <label htmlFor="category">Category:</label>
+              <input
+                id="category"
+                type="text"
+                required
+                placeholder="breakfast,lunch..."
+                value={itemCat}
+                onChange={(e) => setItemCat(e.target.value)}
+              />
+              <label htmlFor="subCategory">Sub-Category:</label>
+              <input
+                id="subCategory"
+                type="text"
+                required
+                placeholder="momo,chowmein..."
+                value={itemSubCat}
+                onChange={(e) => setItemSubCat(e.target.value)}
+              />
+              <label htmlFor="price">Price:</label>
+              <input
+                id="price"
+                type="number"
+                required
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+              />
+              <button type="submit">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       </main>
   );

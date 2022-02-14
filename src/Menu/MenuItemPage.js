@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import DataContext from "../context/DataContext";
 import MissingPage from "../missing/MissingPage";
+import bg from "../images/coolbgB.svg";
 
 
 const MenuItemPage = () => {
@@ -19,8 +20,8 @@ const MenuItemPage = () => {
   return(
     <>
       {item?
-        <main className="MenuItemPage">
-          <div className='container'>
+        <main>
+          <div className="container" style={{background: `url(${bg})`}}>
             <article className="MenuItem">
               <table>
                 <tbody>
