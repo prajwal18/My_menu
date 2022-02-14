@@ -232,12 +232,18 @@ footer .f_logo #text{fill: rgb(0, 0, 0);}
 /*Image Stuff*/
 .homeStuff .imageStuff{
   display: grid;
+  grid-template-rows: auto 1fr;
+}
+.homeStuff .imageStuff .filler{
+  flex-grow: 1;
+}
+.homeStuff .imageStuff .images{
+  width: 100%; display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .homeStuff .imageStuff img{
   width: 100%;
-  cursor: pointer;
 }
 .homeStuff .imageStuff img:hover{
   transform: scale(1.2);

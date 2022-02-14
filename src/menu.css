@@ -50,23 +50,67 @@
     font-weight: 700;
 }
 /*Working on sub category search*/
+.SearchOptions .subcatNsearch{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+}
 .SearchOptions .SubCategory{
     min-height: 25px;
     padding: 0.5rem 1rem;
     border: 2px solid rgb(119, 119, 119);
     border-radius: 5px;
     max-width: 300px;
-    justify-self: center;
     text-transform: capitalize;
+}
+.SearchOptions .subcatNsearch input{
+    min-height: 25px;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(119, 119, 119);
+    border-radius: 5px;
+    max-width: 300px;
 }
 /*---Search Options Done---*/
 
 
 /*Menu List Display*/
 .menuItemList{
+    justify-self: center;
     padding: 2rem;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 2rem;
+}
+
+.menuItemList .MenuItem{
+    padding: 1rem;
+    width: 40%;
+    max-width: 400px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-auto-flow: column;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+}
+.menuItemList .MenuItem img{
+    width: 200px; height: 150px;border-right: 5px solid gold;
+}
+.menuItemList .MenuItem .itemLink{
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    color: black;
+    text-transform: capitalize;
+    padding: 1rem;
+    border-radius: 2px;
+}
+.menuItemList .MenuItem .itemLink:hover{
+    font-weight: 700;
+    background-color: rgb(194, 255, 235);
 }

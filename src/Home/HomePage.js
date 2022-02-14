@@ -27,10 +27,13 @@ const HomePage = () => {
                         </Link>
                     </div>
                     <div className="imageStuff">
-                        <img src={imgB}/>
-                        <img src={imgA}/>
-                        <img src={imgC}/>
-                        <img src={imgD}/>
+                        <div className="images">
+                            <img src={imgB}/>
+                            <img src={imgA}/>
+                            <img src={imgC}/>
+                            <img src={imgD}/>
+                        </div>
+                        <div className="filler"></div>
                     </div>
                 </div>
             </div>
