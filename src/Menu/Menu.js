@@ -3,13 +3,14 @@ import DataContext from '../context/DataContext';
 import MenuItem from './MenuItem';
 
 const Menu = () => {
-  const { searchResult } = useContext(DataContext);
+  const { searchResult, search } = useContext(DataContext);
   return (
     <>
       { searchResult.length ?
         <div className="menuItemList">
           {
-            searchResult.map((item, index) => (
+            searchResult.filter(item => item.title.toLowerCase().includes(search.toLowerCase()))
+            .map((item, index) => (
               <MenuItem
                 key={index}
                 item={item}

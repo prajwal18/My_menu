@@ -11,6 +11,7 @@ export const DataProvider = ({ children }) => {
   const [searchResult, setSearchResult] = useState(menuList);
   const [category, setCategory] = useState('all');
   const [subCategory, setSubCategory] = useState('all');
+  const [search, setSearch] = useState('');
 
 
   useEffect(() => {
@@ -74,7 +75,8 @@ export const DataProvider = ({ children }) => {
       subCategoryList, setSubCategoryList,
       searchResult, setSearchResult,
       category, setCategory,
-      subCategory, setSubCategory
+      subCategory, setSubCategory,
+      search, setSearch
     }}>
       {children}
     </DataContext.Provider>

@@ -1,41 +1,11 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext} from "react";
 import DataContext from "../context/DataContext";
+import SearchFilter from "./SearchFilter";
 
 const SubCategorySearch = () => {
   const {
-    subCategoryList, setSubCategory, subCategory,
-    searchResult,setSearchResult, menuList, category
+    subCategoryList, setSubCategory, subCategory
   } = useContext(DataContext); 
-
-  const [search, setSearch] = useState('');
-
-  useEffect(() => {
-    if(search.trim().toLowerCase() === ''){
-      const tempResult = menuList.filter(item => {
-        if((category === 'all') || (subCategory === 'all')){
-          if((category === 'all') && !(subCategory === 'all')){
-            if(item.subCategory === subCategory) return item;
-          }
-          else if(!(category === 'all') && (subCategory === 'all')){
-            if(item.category === category) return item;
-          }
-          else{
-            return item;
-          }
-        }
-        else if((item.category === category) && (item.subCategory === subCategory)) return item;
-      });
-      setSearchResult(tempResult);
-    }
-    else{
-      const result = searchResult.filter(item => {
-        const temp = search.trim().toLowerCase();
-        if( item.title.trim().toLowerCase().includes(temp) ) return item;
-      });
-      setSearchResult(result);
-    }
-  }, [search]);
-
 
 
 
@@ -56,12 +26,7 @@ const SubCategorySearch = () => {
                 ))
               }
             </select>
-            <input
-              type="text"
-              placeholder="Search Menu Item"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              />
+            <SearchFilter />
           </>
           :
           <p>No sub category list to Display</p>
